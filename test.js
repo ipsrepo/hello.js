@@ -9,7 +9,7 @@ function sumElements(f, m) {
     for (let i of m) {
         for (let j of f) {
             if (i % j === 0) {
-                sum += j;
+                sum += i;
                 break;
             }
         }
