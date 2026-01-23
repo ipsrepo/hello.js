@@ -1,5 +1,3 @@
-alert("test Hello World!");
-
 const factorsElement = document.querySelector('.factors').value;
 const multipleElement = document.querySelector('.multiples').value;
 const resultElement = document.querySelector('.result')
