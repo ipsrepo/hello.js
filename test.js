@@ -6,8 +6,8 @@ const resultElement = document.querySelector('.result');
 
 function sumElements(f, m) {
     let sum = 0;
-    for (let +i of m) {
-        for (let +j of f) {
+    for (let i of m) {
+        for (let j of f) {
             if (i % j === 0) {
                 sum += j;
                 break;
@@ -20,8 +20,8 @@ function sumElements(f, m) {
 
 
 document.querySelector('#submit').addEventListener('click', ()=>{
-    const factors = factorsElement.value.split(',');
-    const multiples = multipleElement.value.split(',');
+    const factors = factorsElement.value.split(',').map(n => +n);
+    const multiples = multipleElement.value.split(',').map(n => +n);
     const result = sumElements(factors, multiples);
     resultElement.innerText = result;
     console.log("array 1 =", ""+factors);
