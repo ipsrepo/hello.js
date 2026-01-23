@@ -1,11 +1,15 @@
 alert("test Hello World!");
 
-function sumElements(m, f) {
+const factorsElement = document.querySelector('.factors').value;
+const multipleElement = document.querySelector('.multiples').value;
+const resultElement = document.querySelector('.result')
+
+function sumElements(f, m) {
     let sum = 0;
     for (let i of m) {
         for (let j of f) {
-            if (j % i === 0) {
-                sum += i;
+            if (i % j === 0) {
+                sum += j;
                 break;
             }
         }
@@ -14,9 +18,9 @@ function sumElements(m, f) {
     return sum;
 }
 
-const elements = [2, 4, 3, 6];
-const multiplier = [3, 8, 9];
+const factors = factorsElement.split(',');
+const multiples = multipleElement.split(',');
 
-console.log("array 1 =", ""+elements);
-console.log("array 2 =", ""+ multiplier);
-console.log(sumElements(elements, multiplier))
+console.log("array 1 =", ""+factors);
+console.log("array 2 =", ""+ multiples);
+resultElement.innerText = sumElements(factors, multiples)
