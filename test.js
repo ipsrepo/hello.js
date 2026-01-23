@@ -18,10 +18,10 @@ function sumElements(f, m) {
     return sum;
 }
 
-const factors = factorsElement.split(',');
-const multiples = multipleElement.split(',');
 
 document.querySelector('#submit').addEventListener('click', ()=>{
+    const factors = factorsElement.split(',');
+    const multiples = multipleElement.split(',');
     const result = sumElements(factors, multiples);
     resultElement.innerText = result;
     console.log("array 1 =", ""+factors);
