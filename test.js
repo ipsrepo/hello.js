@@ -1,6 +1,8 @@
 const factorsElement = document.querySelector('.factors').value;
 const multipleElement = document.querySelector('.multiples').value;
-const resultElement = document.querySelector('.result')
+const resultElement = document.querySelector('.result');
+
+
 
 function sumElements(f, m) {
     let sum = 0;
@@ -19,6 +21,10 @@ function sumElements(f, m) {
 const factors = factorsElement.split(',');
 const multiples = multipleElement.split(',');
 
-console.log("array 1 =", ""+factors);
-console.log("array 2 =", ""+ multiples);
-resultElement.innerText = sumElements(factors, multiples)
+document.querySelector('#submit').addEventListener('click', ()=>{
+    const result = sumElements(factors, multiples);
+    resultElement.innerText = result;
+    console.log("array 1 =", ""+factors);
+    console.log("array 2 =", ""+ multiples);
+    console.log(result)
+});
