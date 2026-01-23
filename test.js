@@ -1,5 +1,5 @@
-const factorsElement = document.querySelector('.factors').value;
-const multipleElement = document.querySelector('.multiples').value;
+const factorsElement = document.querySelector('.factors');
+const multipleElement = document.querySelector('.multiples');
 const resultElement = document.querySelector('.result');
 
 
@@ -20,8 +20,8 @@ function sumElements(f, m) {
 
 
 document.querySelector('#submit').addEventListener('click', ()=>{
-    const factors = factorsElement.split(',');
-    const multiples = multipleElement.split(',');
+    const factors = factorsElement.value.split(',');
+    const multiples = multipleElement.value.split(',');
     const result = sumElements(factors, multiples);
     resultElement.innerText = result;
     console.log("array 1 =", ""+factors);
